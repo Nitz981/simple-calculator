@@ -1,0 +1,184 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('dori\ 10.webp');
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease;
+}
+
+/* Toggle Button on Right */
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.mode-toggle button {
+  padding: 8px 15px;
+  font-size: 14px;
+  background-color: #333;
+  color: white;
+  border: 1px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.mode-toggle button:hover {
+  background-color: #ffa500;
+  color: black;
+}
+
+body.night-mode .mode-toggle button {
+  background-color: #ccc;
+  color: black;
+}
+
+body.night-mode .mode-toggle button:hover {
+  background-color: #ffcc00;
+}
+
+header, footer {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  font-style: unset;
+  
+}
+
+header p {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 3D Calculator Container */
+.calculator {
+  background-image: url('dori\ 1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transform: perspective(800px) rotateX(4deg);
+  width: 300px;
+  border: 2.8px solid black;
+  transition: all 0.3s ease;
+  background-color: #ffa500;
+}
+
+
+
+/* Display Box */
+#display {
+  width: 90%;
+  padding: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  color:black;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.5rem;
+  border:2px solid black;
+  border-radius: 20px;
+  background-color:rgba(231, 247, 164, 0.708);
+  color:black;
+  box-shadow: 0 5px 10px rgba(14, 26, 158, 0.834);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(15) {
+  background-color: rgba(224, 146, 204, 0.708);
+  color: black;
+}
+
+.buttons button:nth-child(15):hover {
+  background-color: rgb(72, 70, 189);
+}
+
+button:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.buttons button:nth-child(4n) {
+  background-color: rgba(54, 239, 54, 0.708); /* green */
+  color: black;
+}
+
+.buttons button:nth-child(4n):hover {
+  background-color: rgb(46, 122, 220);
+}
+
+.clear {
+  grid-column: span 2;
+  background-color: rgba(225, 45, 45, 0.804);
+  color: white;
+}
+
+.delete {
+  grid-column: span 2;
+  background-color: rgba(29, 128, 198, 0.708);
+  color: black;
+}
+
+/* Night Mode Styling */
+body.night-mode {
+  background-image: url('dori\ 20.webp'); 
+}
+
+body.night-mode .calculator {
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.018);
+}
+
+body.night-mode button {
+  background-color: black;
+  color: white;
+}
+
+body.night-mode button:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+  }
+}

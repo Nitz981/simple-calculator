@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="play.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjs@11.8.0/lib/browser/math.js"></script>
+</head>
+<body class="day-mode">
+
+  <!-- Toggle Button on Right -->
+  <div class="mode-toggle">
+    <button id="toggleMode">🌗 Toggle Mode</button>
+  </div>
+   
+  <header id="head">
+    <div>
+    <h1>🧮 Simple Calculator</h1>
+    <p>👦 Calculator for Kids</p>
+    <p>🔢 Play with Numbers!</p>
+    </div>
+  </header>
+  
+
+  <main>
+
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('/')">/</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('*')">*</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('-')">-</button>
+
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="append('+')">+</button>
+
+        <button class="clear" onclick="clearDisplay()">C</button>
+        <button class="delete" onclick="deleteLast()">DEL</button>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2025 Simple Calculator for Kids. All rights reserved &hearts;.</p>
+  </footer>
+
+  <script src="play.js"></script>
+</body>
+</html>
